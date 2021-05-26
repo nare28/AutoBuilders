@@ -1,0 +1,65 @@
+{
+	"schema_name": "projdb",
+	"entity_name": "project",
+	"entity_desc": "Project",
+	"app_port": "50004",
+	"columns_def": [
+		{
+			"name": "projid",
+			"dtype": "int",
+			"desc":"Project ID"
+		},
+		{
+			"name": "projname",
+			"dtype": "varchar",
+			"size": 50,
+			"notnull": true,
+			"desc":"Project Name"
+		},
+		{
+			"name": "startdt",
+			"dtype": "date",
+			"desc":"Start Date"
+		},
+		{
+			"name": "enddt",
+			"dtype": "date",
+			"desc":"End Date"
+		},
+		{
+			"name": "state",
+			"dtype": "varchar",
+			"size": 50,
+			"default": "'Draft'",
+			"desc":"Status"
+		},
+		{
+			"name": "description",
+			"dtype": "varchar",
+			"size": 200,
+			"desc":"Description"
+		},
+		{
+			"name": "depid",
+			"dtype": "int",
+			"default": "99",
+			"desc":"Depeartment"
+		},
+		{
+			"name": "mgrid",
+			"dtype": "int",
+			"desc":"Manager ID"
+		},
+		{
+			"name": "admid",
+			"dtype": "int",
+			"desc":"Admin ID"
+		}
+	],
+	"pk_col": ["projid"],
+	"id_col": "projid",
+	"info_col": ["projname", "startdt", "enddt", "state"],
+	"detl_col": ["projname", "startdt", "enddt", "state", "description", "depid", "mgrid", "admid"],
+	"state": ["Draft", "Open", "InProgress", "Closed"],
+	"update_col": ["startdt", "enddt", "mgrid", "admid"]
+}

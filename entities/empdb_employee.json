@@ -1,0 +1,54 @@
+{
+	"schema_name": "empdb",
+	"entity_name": "employee",
+	"entity_desc": "Employee",
+	"app_port": "50003",
+	"columns_def": [
+		{
+			"name": "empid",
+			"dtype": "int",
+			"desc":"Employee ID"
+		},
+		{
+			"name": "fname",
+			"dtype": "varchar",
+			"size": 30,
+			"notnull": true,
+			"desc":"First Name"
+		},
+		{
+			"name": "lname",
+			"dtype": "varchar",
+			"size": 30,
+			"desc":"Last Name"
+		},
+		{
+			"name": "dob",
+			"dtype": "date",
+			"desc":"Date Of Birth"
+		},
+		{
+			"name": "sal",
+			"dtype": "float",
+			"notnull": true,
+			"desc":"Salary"
+		},
+		{
+			"name": "desid",
+			"dtype": "int",
+			"default": "99",
+			"desc":"Designation"
+		},
+		{
+			"name": "depid",
+			"dtype": "int",
+			"default": "99",
+			"desc":"Department"
+		}
+	],
+	"pk_col": ["empid"],
+	"id_col": "empid",
+	"info_col": ["fname", "lname", "dob"],
+	"detl_col": ["fname", "lname", "dob", "sal", "depid"],
+	"update_col": ["sal", "depid", "desid"]
+}
